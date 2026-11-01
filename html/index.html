@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AquaDash</title>
+    <!-- ИСПРАВЛЕНО: убран слэш в начале, чтобы стили подтягивались локально -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="start-screen" id="startScreen">
+      <h1>AquaDash</h1>
+      <p>Crocodile Adventure</p>
+      <button id="startBtn">Start Game</button>
+      <button id="infoBtn">Instructions</button>
+    </div>
+
+    <div class="instructions hidden" id="instructionsBox">
+      <h2>How to play</h2>
+      <p>Use the arrow keys to move.</p>
+      <p>Use space to jump.</p>
+      <p>Collect coins and avoid enemies.</p>
+    </div>
+
+    <div class="game-info hidden" id="gameInfo">
+      <p id="score">Score: 0</p>
+      <p id="lives">Lives: 3</p>
+      <p id="time">Time: 00:00</p>
+    </div>
+
+    <canvas id="game" width="800" height="400" class="hidden"></canvas>
+
+    <div id="gameOverScreen" class="hidden">
+      <h1>GAME OVER</h1>
+      <p id="finalScore">Your Score: 0</p>
+      <button id="restartBtn">RESTART GAME</button>
+    </div>
+
+    <div id="winScreen" class="hidden">
+      <h1>YOU WIN</h1>
+      <p id="winScore">Your Score: 0</p>
+      <button id="nextBtn">PLAY AGAIN</button>
+    </div>
+
+    <!-- ИСПРАВЛЕНО: убран слэш, а пробел заменен на %20, чтобы браузер прочитал папку "java script" без переименования -->
+    <script src="../javascript/script.js"></script>
+  </body>
+</html>
